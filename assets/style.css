@@ -515,47 +515,37 @@ a{color:inherit;text-decoration:none}
 .pRole{color: var(--muted2); font-size: 11px; margin-top: 2px}
 .pDots{margin-left:auto; color: rgba(255,255,255,.55)}
 
-/* Testimonials */
-.testRow{
-  display:grid;
-  grid-template-columns: 50px 1fr 50px;
-  align-items:center;
-  gap: 10px;
-  margin-top: 18px;
+/* === Testimonials FIX === */
+.section__top.center{
+  position: relative;
+  z-index: 5;            /* keep title above background only */
+  pointer-events: none;  /* prevents blocking slider clicks */
 }
-.carBtn{
-  width: 44px; height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
-  color: rgba(255,255,255,.9);
-  font-size: 22px;
-  cursor:pointer;
-}
-.testTrack{
-  display:grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(260px, 1fr);
-  gap: 16px;
-  overflow:hidden;
-  scroll-behavior:smooth;
-}
-.testCard{
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.02);
-  box-shadow: var(--shadow2);
-}
-.testCard p{margin:0 0 14px; color: var(--muted); line-height:1.7}
-.testWho{display:flex; align-items:center; gap:10px}
-.tAv{width: 34px; height: 34px; border-radius: 999px; background: linear-gradient(135deg, rgba(46,168,255,.6), rgba(108,92,231,.55)); border: 2px solid rgba(6,10,28,.8)}
-.tName{font-weight: 800}
-.tRole{color: var(--muted2); font-size: 12px; margin-top: 2px}
 
-.dots{display:flex; justify-content:center; gap:8px; margin-top: 14px}
-.d{width: 7px; height: 7px; border-radius: 999px; background: rgba(255,255,255,.18)}
-.d.is-on{background: rgba(255,255,255,.75)}
+.section__top.center .pillTag,
+.section__top.center .section__title{
+  pointer-events: auto;  /* allow selecting text if needed */
+}
+
+/* Give the slider breathing room under the title */
+.testRow{
+  margin-top: 34px;  /* was too small in your screenshot */
+  position: relative;
+  z-index: 3;
+}
+
+/* Ensure cards sit above background but below title */
+.testCard{
+  position: relative;
+  z-index: 3;
+}
+
+/* Keep arrows from drifting into content */
+.carBtn{
+  position: relative;
+  z-index: 4;
+}
+
 
 /* FAQ */
 .faqGrid{
