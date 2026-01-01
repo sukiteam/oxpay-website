@@ -1,116 +1,652 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="OxPay is a next-generation Web3 crypto wallet." />
-  <title>Home • OxPay</title>
-
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>OxPay • Smart wallet</title>
+  <meta name="description" content="OxPay is a smart wallet for effortless crypto control."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.css"/>
   <script defer src="assets/app.js"></script>
 </head>
+
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="logo" href="index.html" aria-label="OxPay home">
-        <span class="logo__mark">OX</span>
-        <span class="logo__text">OxPay</span>
+  <!-- Top Nav -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="OxPay home">
+        <span class="brand__text">OxPay</span>
       </a>
 
-      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+      <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" data-menu-btn>
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" data-nav>
-        <a class="nav__link" href="index.html" data-page="index.html">Home</a>
-        <a class="nav__link" href="features.html" data-page="features.html">Features</a>
-        <a class="nav__link" href="security.html" data-page="security.html">Security</a>
-        <a class="nav__link" href="roadmap.html" data-page="roadmap.html">Roadmap</a>
-        <a class="nav__link" href="faq.html" data-page="faq.html">FAQ</a>
-        <a class="nav__link" href="download.html" data-page="download.html">Download</a>
-        <a class="nav__link" href="terms.html" data-page="terms.html">Terms</a>
-        <a class="nav__link" href="privacy.html" data-page="privacy.html">Privacy</a>
-        <a class="nav__link" href="contact.html" data-page="contact.html">Contact</a>
+      <nav class="navpill" data-menu>
+        <a class="navpill__link is-active" href="#top">Home</a>
+        <a class="navpill__link" href="#exchange">Exchange</a>
+        <a class="navpill__link" href="#wallet">Wallet</a>
+        <a class="navpill__link" href="#invest">Invest</a>
+        <a class="navpill__link" href="#security">Security</a>
       </nav>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="#signin">Sign In</a>
+        <a class="btn btn--primary" href="#register">Register</a>
+      </div>
     </div>
   </header>
 
-  <main class="main">
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="card">
-          <div class="card__inner">
-            <span class="badge"><span class="dot"></span> Next-gen wallet</span>
-            <h1 class="h1">Crypto made simple,<br/>safe & rewarding</h1>
-            <p class="lead">
-              OxPay is a next-generation Web3 wallet built for everyday users.
-              Send, receive, and earn rewards with confidence — without the chaos.
-            </p>
+  <!-- HERO -->
+  <main id="top" class="heroWrap">
+    <div class="heroGlow"></div>
 
-            <div class="actions">
-              <a class="btn btn--primary" href="download.html">Download</a>
-              <a class="btn" href="features.html">View features</a>
-            </div>
+    <section class="hero container">
+      <div class="badgeLine">
+        <span class="badge">New</span>
+        <span class="badgeText">OxPay Wallet Upgraded</span>
+      </div>
 
-            <div class="grid3">
-              <div class="tile">
-                <h3>Multi-chain</h3>
-                <p>Solana + EVM support.</p>
-              </div>
-              <div class="tile">
-                <h3>Rewards</h3>
-                <p>Cashback + points built in.</p>
-              </div>
-              <div class="tile">
-                <h3>Scam-aware</h3>
-                <p>Security-first wallet design.</p>
-              </div>
-            </div>
+      <h1 class="heroTitle">Smart wallet for effortless<br/>Bitcoin control</h1>
+      <p class="heroSub">
+        Access over 30 digital assets and trade freely using global currencies — all from one wallet.
+      </p>
+
+      <div class="heroCtas">
+        <a class="btn btn--primary btn--lg" href="#register">Get Started</a>
+        <div class="emailCta">
+          <input class="emailCta__input" type="email" placeholder="Enter your email" aria-label="Email"/>
+          <button class="emailCta__btn" type="button">→</button>
+        </div>
+      </div>
+
+      <!-- Phone / Exchange mock -->
+      <div class="phoneStage" id="exchange">
+        <div class="floatCard floatCard--leftTop">
+          <div class="floatCard__title">Available Balance</div>
+          <div class="floatCard__row">
+            <div class="floatCard__val">$17,41,132</div>
+            <div class="chip chip--up">+7.34%</div>
           </div>
         </div>
 
-        <div class="card side">
-          <div class="card__inner">
-            <div class="row">
-              <div class="pillbox">
-                <div class="label">Website</div>
-                <div class="value"><a href="https://www.oxpaywallet.com" target="_blank" rel="noreferrer">oxpaywallet.com</a></div>
-              </div>
-              <div class="pillbox">
-                <div class="label">Support</div>
-                <div class="value"><a href="mailto:Support@oxpaywallet.com">Support@oxpaywallet.com</a></div>
-              </div>
-              <div class="pillbox">
-                <div class="label">Custody</div>
-                <div class="value">Non-custodial</div>
-              </div>
-              <p class="lead" style="margin:0">
-                Clean UX, clear safety, and rewards that actually feel rewarding.
-              </p>
-            </div>
+        <div class="floatCard floatCard--leftBottom">
+          <div class="floatCard__title">Received</div>
+          <div class="floatCard__row">
+            <div class="floatCard__val">5484,65 EUR</div>
           </div>
         </div>
 
+        <div class="floatCard floatCard--rightTop">
+          <div class="floatCard__title">Net Income</div>
+          <div class="floatCard__row">
+            <div class="floatCard__val">$4552.2K</div>
+          </div>
+        </div>
+
+        <div class="floatCard floatCard--rightBottom">
+          <div class="floatCard__title">Total users</div>
+          <div class="floatCard__row">
+            <div class="avatars">
+              <span class="av"></span><span class="av"></span><span class="av"></span>
+            </div>
+            <div class="floatCard__val">165,54K+</div>
+          </div>
+        </div>
+
+        <div class="phone">
+          <div class="phone__notch">
+            <span class="t">10:00</span>
+            <span class="icons">
+              <span class="i"></span><span class="i"></span><span class="i"></span>
+            </span>
+          </div>
+
+          <div class="phone__panel">
+            <h3 class="phone__title">Currency Exchange</h3>
+            <p class="phone__sub">Latest market rates for major crypto assets</p>
+
+            <div class="exRow">
+              <div class="coin coin--usd"></div>
+              <div class="exRow__mid">
+                <div class="exRow__label">USD</div>
+              </div>
+              <div class="exRow__val">$10,455.41</div>
+            </div>
+
+            <div class="exRow">
+              <div class="coin coin--btc">₿</div>
+              <div class="exRow__mid">
+                <div class="exRow__label">BTC</div>
+              </div>
+              <div class="exRow__val">$14,554.78</div>
+            </div>
+
+            <button class="btn btn--softWide" type="button">Convert Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- coin ticker -->
+      <div class="ticker">
+        <div class="ticker__item"><span class="dotCoin dotCoin--eth"></span> Ethereum</div>
+        <div class="ticker__item"><span class="dotCoin dotCoin--usdt"></span> Tether</div>
+        <div class="ticker__item"><span class="dotCoin dotCoin--btc"></span> Bitcoin</div>
+        <div class="ticker__item"><span class="dotCoin dotCoin--sol"></span> Solana</div>
+        <div class="ticker__item"><span class="dotCoin dotCoin--poly"></span> Polygon</div>
+        <div class="ticker__item"><span class="dotCoin dotCoin--doge"></span> Dogecoin</div>
+        <div class="ticker__item"><span class="dotCoin dotCoin--bnb"></span> BNB</div>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <div class="footer__brand">OxPay — Simple. Safe. Rewarding.</div>
-        <div class="footer__meta">
-          <a href="https://www.oxpaywallet.com" target="_blank" rel="noreferrer">oxpaywallet.com</a>
-          <span class="dot">•</span>
-          <a href="mailto:Support@oxpaywallet.com">Support@oxpaywallet.com</a>
+    <!-- HOW IT WORKS -->
+    <section class="section container" id="wallet">
+      <div class="section__top">
+        <span class="pillTag"><span class="spark">✦</span> Crack the Challenge</span>
+        <h2 class="section__title">How It Works</h2>
+        <p class="section__sub">Easily load your wallet and begin trading in an instant</p>
+      </div>
+
+      <div class="howGrid">
+        <article class="phaseCard">
+          <div class="phaseChip">Phase 1</div>
+          <h3>Create Your Account</h3>
+          <p>Create an account and verify your identity to secure your wallet.</p>
+          <div class="phaseIcon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M18 30c6 0 10-4 10-10s-4-10-10-10S8 14 8 20s4 10 10 10Zm0 6c-8 0-14 4-14 10v6h28v-6c0-6-6-10-14-10Z" fill="rgba(200,220,255,.55)"/>
+              <path d="M34 18h22v6H34v-6Zm0 12h22v6H34v-6Z" fill="rgba(200,220,255,.35)"/>
+            </svg>
+          </div>
+        </article>
+
+        <article class="phaseCard">
+          <div class="phaseChip">Phase 2</div>
+          <h3>Add Funds Securely</h3>
+          <p>Easily deposit funds securely using trusted payment methods.</p>
+          <div class="phaseIcon">
+            <div class="gauge">
+              <div class="gauge__arc"></div>
+              <div class="gauge__needle"></div>
+              <div class="gauge__txt">
+                <div class="gauge__small">Total Balance</div>
+                <div class="gauge__big">$15,545.65</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="phaseCard">
+          <div class="phaseChip">Phase 3</div>
+          <h3>Buy & trade BTC</h3>
+          <p>Buy or trade Bitcoin instantly with other cryptocurrencies.</p>
+          <div class="phaseIcon">
+            <div class="miniNet">
+              <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+              <span class="line l1"></span><span class="line l2"></span><span class="line l3"></span>
+              <span class="walletDot"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="phaseCard">
+          <div class="phaseChip">Phase 4</div>
+          <h3>Your Profit & Payouts</h3>
+          <p>Monitor earnings and withdraw profits instantly and securely.</p>
+          <div class="phaseIcon">
+            <div class="orbit">
+              <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+              <span class="center"></span>
+              <span class="ring"></span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="centerCta">
+        <a class="btn btn--primary btn--lg" href="#register">Join Now</a>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US / RECENT WORK -->
+    <section class="section container" id="invest">
+      <div class="chooseGrid">
+        <div class="chooseLeft">
+          <span class="pillTag"><span class="spark">✦</span> Why Choose Us?</span>
+          <h2 class="chooseTitle">Making the world smaller, one easy transaction at a time</h2>
+          <p class="chooseSub">
+            With OxPay Wallet, you get one seamless solution for crypto and fiat, instant transfers,
+            and a smooth experience without the usual verification fuss.
+          </p>
+
+          <div class="chooseList">
+            <div class="chooseItem is-active">
+              <span class="chooseIcon">🚀</span>
+              <div>
+                <div class="chooseItem__title">Verified and Reliable Security</div>
+                <div class="chooseItem__sub">Clean, safe, and worry-free every time.</div>
+              </div>
+            </div>
+
+            <div class="chooseItem">
+              <span class="chooseIcon">🗓️</span>
+              <div>
+                <div class="chooseItem__title">Customizable Appointment Times</div>
+                <div class="chooseItem__sub">Set alerts & schedules that fit your flow.</div>
+              </div>
+            </div>
+
+            <div class="chooseItem">
+              <span class="chooseIcon">💳</span>
+              <div>
+                <div class="chooseItem__title">Convenient Digital Payments</div>
+                <div class="chooseItem__sub">Simple swaps, fast send/receive.</div>
+              </div>
+            </div>
+
+            <div class="chooseItem">
+              <span class="chooseIcon">🛟</span>
+              <div>
+                <div class="chooseItem__title">24/7 Always-Available Support Team</div>
+                <div class="chooseItem__sub">We’re here when you need us.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chooseRight" id="security">
+          <div class="artCard">
+            <div class="artCard__img">
+              <!-- “shield” placeholder art -->
+              <svg viewBox="0 0 320 260" fill="none" class="shieldSvg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="g1" x1="40" y1="0" x2="280" y2="260">
+                    <stop stop-color="#00d2ff" stop-opacity=".95"/>
+                    <stop offset="1" stop-color="#6c5ce7" stop-opacity=".9"/>
+                  </linearGradient>
+                </defs>
+                <path d="M160 20c42 28 86 14 120 30v82c0 72-56 110-120 126C96 242 40 204 40 132V50c34-16 78-2 120-30Z" fill="url(#g1)" opacity=".25"/>
+                <path d="M160 42c32 22 66 10 92 22v62c0 56-42 86-92 98-50-12-92-42-92-98V64c26-12 60 0 92-22Z" stroke="rgba(255,255,255,.55)" stroke-width="2" opacity=".55"/>
+                <path d="M160 86c20 0 36 16 36 36 0 16-10 30-24 35v18h-24v-18c-14-5-24-19-24-35 0-20 16-36 36-36Z" fill="rgba(255,255,255,.75)" opacity=".65"/>
+                <path d="M150 122h20" stroke="rgba(10,20,40,.65)" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+              <div class="sparkles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="artCard__text">
+              <h3>Recent Work</h3>
+              <p>
+                From buying to withdrawing, our flows ensure every step is safe, reliable,
+                and gives you confidence in every transaction.
+              </p>
+              <a class="btn btn--primary" href="#register">Explore More</a>
+            </div>
+
+            <div class="peopleCard">
+              <div class="peopleCard__top">
+                <div class="peopleCard__title">Our Professionals</div>
+                <a class="peopleCard__link" href="#register">See More</a>
+              </div>
+
+              <div class="personRow">
+                <span class="pAv"></span>
+                <div class="pMeta">
+                  <div class="pName">Daniel Walker</div>
+                  <div class="pRole">Web Developer</div>
+                </div>
+                <span class="pDots">⋮</span>
+              </div>
+
+              <div class="personRow">
+                <span class="pAv"></span>
+                <div class="pMeta">
+                  <div class="pName">Daniel Walker</div>
+                  <div class="pRole">Web Developer</div>
+                </div>
+                <span class="pDots">⋮</span>
+              </div>
+
+              <div class="personRow">
+                <span class="pAv"></span>
+                <div class="pMeta">
+                  <div class="pName">Daniel Walker</div>
+                  <div class="pRole">Web Developer</div>
+                </div>
+                <span class="pDots">⋮</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer__right">© 2026 OxPay. All rights reserved.</div>
-    </div>
-  </footer>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section container">
+      <div class="section__top center">
+        <span class="pillTag"><span class="spark">✦</span> Testimonial</span>
+        <h2 class="section__title">Customer voices & experiences</h2>
+      </div>
+
+      <div class="testRow" data-carousel>
+        <button class="carBtn" type="button" aria-label="Previous" data-prev>‹</button>
+
+        <div class="testTrack" data-track>
+          <article class="testCard">
+            <p>“Fast, reliable, and hassle-free — handle your crypto purchases and withdrawals with confidence.”</p>
+            <div class="testWho">
+              <span class="tAv"></span>
+              <div>
+                <div class="tName">James Carter</div>
+                <div class="tRole">Web Developer</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testCard">
+            <p>“Lightning-fast and dependable — every transaction is secure, seamless, and nearly instantaneous.”</p>
+            <div class="testWho">
+              <span class="tAv"></span>
+              <div>
+                <div class="tName">William Johnson</div>
+                <div class="tRole">Security Analyst</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testCard">
+            <p>“Quick, dependable, and hassle-free — manage crypto purchases and withdrawals with ease.”</p>
+            <div class="testWho">
+              <span class="tAv"></span>
+              <div>
+                <div class="tName">John Mitchell</div>
+                <div class="tRole">Product Manager</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testCard">
+            <p>“Ultra-fast and reliable — smooth experience and crypto management you can trust.”</p>
+            <div class="testWho">
+              <span class="tAv"></span>
+              <div>
+                <div class="tName">Brian Ramirez</div>
+                <div class="tRole">Founder</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <button class="carBtn" type="button" aria-label="Next" data-next>›</button>
+      </div>
+
+      <div class="dots" data-dots aria-hidden="true">
+        <span class="d is-on"></span><span class="d"></span><span class="d"></span><span class="d"></span>
+      </div>
+    </section>
+
+    <!-- FAQ + DOWNLOAD -->
+    <section class="section container" id="faq">
+      <div class="faqGrid">
+        <div class="faqLeft">
+          <h2 class="faqTitle">Frequently Asked Questions</h2>
+          <p class="faqSub">Get clear answers to common questions for smarter, faster, and easier crypto.</p>
+
+          <div class="tabRow" role="tablist" aria-label="FAQ categories">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="features">Features</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="general">General</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="discounts">Discounts</button>
+          </div>
+
+          <div class="faqArt">
+            <svg viewBox="0 0 520 320" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="qa" x1="80" y1="10" x2="480" y2="320">
+                  <stop stop-color="#00d2ff" stop-opacity=".8"/>
+                  <stop offset="1" stop-color="#6c5ce7" stop-opacity=".8"/>
+                </linearGradient>
+              </defs>
+              <circle cx="260" cy="170" r="120" stroke="rgba(255,255,255,.18)" stroke-width="6"/>
+              <circle cx="260" cy="170" r="78" stroke="rgba(255,255,255,.12)" stroke-width="6"/>
+              <path d="M260 82c28 0 52 18 52 46 0 20-11 33-30 41-9 4-14 10-14 20v10h-20v-12c0-20 8-32 26-40 13-6 18-14 18-22 0-14-14-24-32-24-14 0-26 6-34 18l-16-10c12-20 34-27 50-27Z" fill="url(#qa)" opacity=".75"/>
+              <circle cx="260" cy="236" r="10" fill="url(#qa)" opacity=".85"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="faqRight">
+          <div class="accordion" data-acc>
+            <div class="accItem is-open" data-cat="general">
+              <button class="accBtn" type="button">
+                <span>Can I replace or return a purchased item?</span>
+                <span class="accIcon">–</span>
+              </button>
+              <div class="accPanel">
+                You can return or exchange items within our specified return period, as long as they're unused,
+                unopened, and accompanied by a valid receipt.
+              </div>
+            </div>
+
+            <div class="accItem" data-cat="general">
+              <button class="accBtn" type="button">
+                <span>Can I pick up my order instead?</span>
+                <span class="accIcon">+</span>
+              </button>
+              <div class="accPanel">
+                Yes — for supported regions we offer pickup/collection partners. Availability may vary.
+              </div>
+            </div>
+
+            <div class="accItem" data-cat="features">
+              <button class="accBtn" type="button">
+                <span>How do I search for products?</span>
+                <span class="accIcon">+</span>
+              </button>
+              <div class="accPanel">
+                Use the search bar in the app, or explore tokens by chain, trending, and verified lists.
+              </div>
+            </div>
+
+            <div class="accItem" data-cat="features">
+              <button class="accBtn" type="button">
+                <span>Can I schedule a delivery time?</span>
+                <span class="accIcon">+</span>
+              </button>
+              <div class="accPanel">
+                You can schedule alerts, recurring buys, and notifications inside the wallet settings.
+              </div>
+            </div>
+
+            <div class="accItem" data-cat="discounts">
+              <button class="accBtn" type="button">
+                <span>How can I reset my password?</span>
+                <span class="accIcon">+</span>
+              </button>
+              <div class="accPanel">
+                OxPay is non-custodial; access is controlled by your device + seed phrase. Keep it safe.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="downloadGrid" id="download">
+        <div class="downloadLeft">
+          <span class="pillTag"><span class="spark">✦</span> Mobile App</span>
+          <h2 class="downloadTitle">Download Our Mobile app</h2>
+          <p class="downloadSub">
+            Manage your finances, stay updated — all from your mobile device.
+          </p>
+
+          <ul class="bullet">
+            <li>Keep your funds safe with multi-layer security.</li>
+            <li>Browse, swap, and manage assets in a few taps.</li>
+            <li>Fully responsive for mobile, tablet, and desktop.</li>
+            <li>Instant send/receive with clear confirmations.</li>
+          </ul>
+
+          <div class="storeBtns">
+            <a class="store store--gp" href="#register" aria-label="Google Play">
+              <span class="store__small">GET IT ON</span>
+              <span class="store__big">Google Play</span>
+            </a>
+            <a class="store store--as" href="#register" aria-label="App Store">
+              <span class="store__small">Download on the</span>
+              <span class="store__big">App Store</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="downloadRight">
+          <div class="appMock">
+            <div class="appMock__screen">
+              <div class="appMock__hdr">
+                <span class="appMock__dot"></span>
+                <span class="appMock__dot"></span>
+                <span class="appMock__dot"></span>
+              </div>
+              <div class="appMock__chart"></div>
+              <div class="appMock__rows">
+                <div class="appMock__row"></div>
+                <div class="appMock__row"></div>
+                <div class="appMock__row"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="contactGrid">
+        <div class="contactLeft">
+          <span class="pillTag"><span class="spark">✦</span> Contact Us</span>
+          <h2 class="contactTitle">Let’s Connect and Collaborate</h2>
+          <p class="contactSub">
+            We’re always here to help! Whether you have a question, need support,
+            or want to share thoughts — our team is happy to hear from you anytime.
+          </p>
+
+          <div class="contactInfo">
+            <div class="ci"><span class="ci__i">✉</span> Support@oxpaywallet.com</div>
+            <div class="ci"><span class="ci__i">☎</span> +1 (000) 000-0000</div>
+            <div class="ci"><span class="ci__i">⏱</span> Available: Mon–Fri, 9 AM – 10 PM (GMT)</div>
+          </div>
+
+          <a class="btn btn--primary" href="#register">Live Chat</a>
+        </div>
+
+        <div class="contactRight">
+          <div class="formCard">
+            <h3>We value your input</h3>
+            <form class="form" onsubmit="return false;">
+              <div class="formRow2">
+                <label class="field">
+                  <span>Fast name</span>
+                  <input type="text" placeholder="Enter your first name"/>
+                </label>
+                <label class="field">
+                  <span>Last name</span>
+                  <input type="text" placeholder="Enter your last name"/>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Email</span>
+                <input type="email" placeholder="Enter your email address"/>
+              </label>
+
+              <label class="field">
+                <span>How can we help you?</span>
+                <textarea rows="4" placeholder="Enter your message...."></textarea>
+              </label>
+
+              <div class="formActions">
+                <button class="btn btn--primary" type="button">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="newsletter">
+        <div>
+          <h3>Join our weekly newsletter</h3>
+          <p>Stay up to date with the latest news, announcements, and articles.</p>
+        </div>
+        <div class="newsInput">
+          <input type="email" placeholder="Enter your email" aria-label="Newsletter email"/>
+          <button class="btn btn--primary" type="button">Subscribe</button>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footerTop">
+          <div class="footBrand">
+            <div class="footLogo">OxPay</div>
+            <p>Yes! Our basic features are always free — no credit card required.</p>
+            <div class="social">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="WhatsApp">w</a>
+              <a href="#" aria-label="Twitter">x</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+
+          <div class="footCols">
+            <div class="col">
+              <div class="col__title">Products</div>
+              <a href="#wallet">Features</a>
+              <a href="#invest">Pricing</a>
+              <a href="#download">Download App</a>
+              <a href="#exchange">Dashboard Demo</a>
+            </div>
+
+            <div class="col">
+              <div class="col__title">Company</div>
+              <a href="#top">About Us</a>
+              <a href="#top">Careers</a>
+              <a href="#top">Blog</a>
+              <a href="#contact">Contact</a>
+            </div>
+
+            <div class="col">
+              <div class="col__title">Support</div>
+              <a href="#faq">Help Center</a>
+              <a href="#faq">FAQs</a>
+              <a href="#privacy">Privacy Policy</a>
+            </div>
+
+            <div class="col">
+              <div class="storeStack">
+                <a class="storeMini" href="#register">Google Play</a>
+                <a class="storeMini" href="#register">App Store</a>
+                <div class="storeMini__label">Download Our App</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footerBottom" id="privacy">
+          <div>© 2026 OxPay. All rights reserved.</div>
+          <div class="footLinks">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- anchors for buttons -->
+    <div id="signin" class="srOnly">Sign In</div>
+    <div id="register" class="srOnly">Register</div>
+    <div id="terms" class="srOnly">Terms</div>
+  </main>
 </body>
 </html>
